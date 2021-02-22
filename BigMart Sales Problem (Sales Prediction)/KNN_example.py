@@ -144,7 +144,7 @@ import math
 
 ### Here I manully tries to find the best K using elbow curve
 rmse_val = [] #to store rmse values for different k
-for K in range(20):
+for K in range(40):
     K = K+1
     model = neighbors.KNeighborsRegressor(n_neighbors = K)
 
@@ -158,6 +158,11 @@ for K in range(20):
 curve = pd.DataFrame(rmse_val) #elbow curve 
 curve.plot()
 
+#%%
 ### Here we use gride search algorithm to automatically find the best answer
 from sklearn.model_selection import GridSearchCV
-
+params = {'n_neighbors':[2,3,4,5,6,7,8,9, 12,15,20,18,21,22,24,28,30,35,39,40,41,42,50]} ## Provide the parameters that we want to perform the Grid search on
+knn = neighbors.KNeighborsRegressor()
+model = GridSearchCV(knn, params, cv=5)
+model.fit(X_train,Y_train)
+model.best_params_
