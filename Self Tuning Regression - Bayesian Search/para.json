@@ -1,0 +1,25 @@
+[
+  {
+   "name": "hidden_dim",
+   "type": "range",
+   "bounds":[200, 500],
+   "value_type":"int"
+  },
+  {
+    "name": "batch_size",
+    "type": "range",
+    "bounds": [30, 100],
+    "value_type": "int"
+  },
+  {
+    "name": "activate_fuc",
+    "type": "choice",
+    "values": ["ReLU", "Tanh"]
+  },
+  {
+    "name": "lr",
+    "type": "range",
+    "bounds": [0.005, 0.02],
+    "log_scale": true
+  }
+]
