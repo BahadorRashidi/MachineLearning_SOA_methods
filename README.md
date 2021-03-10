@@ -1,4 +1,4 @@
-## This REpository include implemetation of state-of-the-art ML methods
+## This Repository include implemetation of state-of-the-art ML methods
 * Regression
 * Classification
 * EDA
@@ -9,3 +9,6 @@
 * Pipeline Design for Automatic tuning
 * Stacked AutoEncoder for Feature Engineering
 * Recommender Systems for automatic decision making
+
+
+P.S. More materials will be comming ...
